@@ -1,13 +1,14 @@
-/* Layout: topo amarelo, hero com cachorro desenhado em SVG, faixa de diferenciais, preços por porte, agendamento em faixa azul */
+/* Layout: topo buttermilk, hero com cachorro desenhado em SVG, faixa de diferenciais, preços por porte, agendamento em faixa marinho */
 :root {
   --marinho: #17375e;
-  --azul: #2f7fc1;
-  --ceu: #e3f1fb;
-  --sol: #ffc845;
-  --sol-escuro: #f2b52a;
+  --azul: #8fbfe3;          /* Icy Blue */
+  --azul-texto: #2f6f9f;    /* versão escura do Icy Blue, para texto e foco (contraste) */
+  --ceu: #e8f2fa;
+  --sol: #f6ebc3;          /* Buttermilk */
+  --sol-escuro: #e2cf94;
   --coral: #ff7a59;
   --fundo: #fffdf8;
-  --linha: #d3e4f1;
+  --linha: #d0e3f2;
   --mudo: #4f647c;
   --display: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
   --corpo: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -25,7 +26,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 p { margin: 0 0 0.75rem; }
 .container { width: min(1060px, 100% - 32px); margin-inline: auto; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-:focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--azul-texto); outline-offset: 3px; }
 
 /* Topo */
 .topo { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; background: var(--sol); }
@@ -38,18 +39,18 @@ p { margin: 0 0 0.75rem; }
 
 /* Botões */
 .btn { display: inline-block; padding: 14px 24px; border-radius: 999px; font-weight: 800; text-decoration: none; text-align: center; }
-.btn-primario { background: var(--sol); color: var(--marinho); box-shadow: 0 4px 0 var(--sol-escuro); }
+.btn-primario { border: 2px solid var(--sol-escuro); background: var(--sol); color: var(--marinho); box-shadow: 0 4px 0 var(--sol-escuro); }
 .btn-primario:hover { background: var(--sol-escuro); }
 .btn-linha { border: 2px solid var(--marinho); }
 .btn-linha:hover { background: var(--marinho); color: #fff; }
-.btn-whats { display: block; background: var(--sol); color: var(--marinho); font-size: 1.05rem; box-shadow: 0 4px 0 var(--sol-escuro); }
+.btn-whats { display: block; border: 2px solid var(--sol-escuro); background: var(--sol); color: var(--marinho); font-size: 1.05rem; box-shadow: 0 4px 0 var(--sol-escuro); }
 .btn-whats:hover { background: var(--sol-escuro); }
 .acoes { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Hero */
 .hero { padding: 48px 0 56px; background: var(--ceu); overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: center; }
-.eyebrow { font-weight: 800; font-size: 0.82rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--azul); }
+.eyebrow { font-weight: 800; font-size: 0.82rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--azul-texto); }
 .lead { color: var(--mudo); font-size: 1.08rem; max-width: 54ch; margin-bottom: 1.25rem; }
 .cachorro { position: relative; display: grid; place-items: center; min-height: 280px; }
 .cachorro::before { content: ''; position: absolute; width: min(100%, 300px); aspect-ratio: 1; border-radius: 50%; background: var(--sol); }
@@ -80,7 +81,7 @@ p { margin: 0 0 0.75rem; }
 .porte.ativo span { color: var(--marinho); }
 .lista-servicos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .item { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 18px; background: #fff; border: 2px solid var(--linha); border-radius: 18px; }
-.item.destaque { border-color: var(--marinho); background: #fff8e1; }
+.item.destaque { border-color: var(--marinho); background: #fbf4dc; }
 .item p { margin: 2px 0 0; color: var(--mudo); font-size: 0.9rem; }
 .selo { display: inline-block; margin-left: 6px; padding: 2px 10px; border-radius: 999px; background: var(--coral); color: #fff; font-family: var(--corpo); font-size: 0.7rem; font-weight: 800; vertical-align: middle; }
 .preco { display: flex; flex-direction: column; align-items: flex-end; flex: none; }
@@ -105,7 +106,7 @@ fieldset { margin: 0; padding: 0; border: 0; }
 .depoimentos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .depoimentos figure { margin: 0; padding: 20px; background: #fff; border: 2px solid var(--linha); border-radius: 20px; }
 .depoimentos blockquote { margin: 0 0 12px; }
-.depoimentos figcaption { color: var(--azul); font-weight: 800; font-size: 0.88rem; }
+.depoimentos figcaption { color: var(--azul-texto); font-weight: 800; font-size: 0.88rem; }
 .contato { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 .horarios { list-style: none; margin: 0; padding: 0; }
 .horarios li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--linha); }
