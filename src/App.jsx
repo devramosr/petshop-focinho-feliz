@@ -42,11 +42,14 @@ export default function App({ lang = 'pt' }) {
   const porteAtual = portes.find((p) => p.id === porte)[lang]
 
   const base = selecionados.length ? ui.msgComServicos : ui.msgSemServicos
-  const mensagem = base
-    .replace('{pet}', pet.trim() || ui.msgPetPadrao)
-    .replace('{porte}', porteAtual.nome.toLowerCase())
-    .replace('{servicos}', selecionados.map((s) => s[lang].nome).join(', '))
-    .replace('{total}', brl(total))
+  // Uma passada só: o que o visitante digita (nome do pet) nunca é interpretado como marcador nem como "$&"
+  const valores = {
+    pet: pet.trim() || ui.msgPetPadrao,
+    porte: porteAtual.nome.toLowerCase(),
+    servicos: selecionados.map((s) => s[lang].nome).join(', '),
+    total: brl(total),
+  }
+  const mensagem = base.replace(/\{(\w+)\}/g, (marcador, chave) => valores[chave] ?? marcador)
 
   return (
     <>

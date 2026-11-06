@@ -7,7 +7,7 @@ Modelo de site de uma página para pet shop e banho e tosa: preços que mudam co
 <!-- Ver online: cole aqui o endereço do site publicado, no formato **[Ver online](https://...)** -->
 
 <p align="center">
-  <img src="docs/screenshot-desktop.png" alt="Site do pet shop no desktop: topo amarelo, título, cachorro ilustrado e faixa de diferenciais" width="640">
+  <img src="docs/screenshot-desktop.png" alt="Site do pet shop no desktop: topo em buttermilk, título, cachorro ilustrado e faixa de diferenciais" width="640">
   <img src="docs/screenshot-mobile.png" alt="Site do pet shop no celular: tela inicial" width="231">
 </p>
 
