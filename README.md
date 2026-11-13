@@ -31,8 +31,8 @@ Modelo de site de uma página para pet shop e banho e tosa: preços que mudam co
 
 | | |
 |---|---|
-| Interface | React 18 |
-| Build e dev server | Vite 5 |
+| Interface | React 19 |
+| Build e dev server | Vite 8 |
 | Estilo | CSS puro (variáveis, grid e flexbox) |
 | Fontes | Baloo 2 e Nunito (Google Fonts) |
 
